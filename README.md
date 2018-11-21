@@ -4,27 +4,23 @@
 - author/site : Jimmy MG Lim (mirageglobe@gmail.com) / www.mirageglobe.com
 - source : https://github.com/mirageglobe/clamshieldcli
 
-This project has been shifted to be simply named *jimmys swiss-knife (JSK)*. JSK is a commandline application that does the following:
+This project is a collection of helpers to speed up clamav scanner and configuration. ClamAVcli is a commandline application that does the following:
 
-* converts common sound/music formats to be of mp3
-* converts common video formats to be mp4 (not to be confused with mp4a which is mpeg 4 audio layer)
-* converts common image formats to be optimised png (for the web/print)
-* converts print compatible formatting such as image or documents to be converted to pdf
+* provides a single maintained scan of one location
+* a strategic sweep of systemwide files and folders
+* a strategic incremental scan for memory limited machines or instances (less than 512mb)
 
-The rational for this is that there are various tools that are fully equipped to do various fine grained optimisations however this comes as a cost for complexity. The key aim for this project is to have an all in one tool that can optimise all three of the filetypes and focus on one/two commmon outputs that is suffice for general use. The trade of is simplicity vs functionality coverage. This tool focuses on simplicity and core tooling.
+The rational for this is that clamav is traditionally very memory intensive. it was designed to place files in memory as well as virus signatures for scanning. it is common for out of memory issues to happen if configured improperly. infact it almost always runs out of memory.
+
+This project aims to simply use progressive incremental techniques of marking and isolation of files to scan a system. Ideally this deals with both micro vms or docker containers.
 
 # To use #
 
 to run and see options/help,
 ```
-  $ sh jsk.[tool].sh
+  $ sh clamshield.xxxx.sh
 ```
 
-shellcheck treats local declarations as non POSIX, however local is widely used. enable using by added in your vimrc
-```
-  " allow the use of 'local'
-  let g:syntastic_sh_shellcheck_args="-e SC2039"
-```
 
 # Guidelines #
 
