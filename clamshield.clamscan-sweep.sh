@@ -9,7 +9,7 @@
 # notify results + infections
 # update log
 
-CAV_EMAIL="mirageglobe@gmail.com"
+CAV_EMAIL="youradminemail@yourdomain.com"
 CAV_HOST=$(hostname)
 
 CAV_DATESTAMP=$(date +%Y%m)

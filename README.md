@@ -28,6 +28,10 @@ a few points to note before submitting PR :
 
 - ensure this is tested on debian (as indicated in vagrantfile)
 
+# References #
+
+- http://forums.clamwin.com/viewtopic.php?t=4279 (for 5 phase clamav scanning optimisation)
+
 # License #
 
 Copyright 2018 Jimmy MG Lim (mirageglobe@gmail.com)
