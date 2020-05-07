@@ -25,23 +25,18 @@ _print_help() {
   # Print the program help information.
 
   cat <<HEREDOC
+usage: ${app_basename} [options] <command> [<args>]
+  
+  -h, --help          display this help information.
 
-SHELLAPP
-  this utility app prints/execute helper functions to manage this application
-
-  version       v0.1.0
-  author/site   jimmylim (mirageglobe@gmail.com) / www.mirageglobe.com
-
-usage:
-  ${app_basename} [command]
-  ${app_basename} [--options] [<arguments>]
-  ${app_basename} -h | --help
-
-options:
-  -h --help  Display this help information.
+commands:
+  
+  scan                scan file or folder
+  update              update virus definitions
 
 examples:
-  ${app_basename} -y (to confirm launch script)
+  
+  ${app_basename} scan
 
 HEREDOC
 }
@@ -79,29 +74,27 @@ echo "$app_argv1 ... [searching]"
 app_os="NIL"
 app_cmd=$app_argv1
 
-if _is_macos; then
-  app_os="MAC"
-elif _is_linux; then
-  app_os="NIX"
-fi
+# if _is_macos; then
+#   app_os="MAC"
+# elif _is_linux; then
+#   app_os="NIX"
+# fi
+app_os="MAC"
 
 # default checks
 if [ "$app_os" != "NIL" ]; then
   case "$app_cmd" in
     help)
       # list help
-      _print_help
+      _print_help;
       ;;
-    run)
-      # your option for run here
-      bundle exec foreman start
+    scan)
+      echo "scanning current folder/files ..."
+      clamscan .
       ;;
-    build)
-      # your option for build here
-      echo "app is building"
-      ;;
-    test)
-      # your option for test here
+    update)
+      echo "updating clamav ..."
+      freshclam
       ;;
     *)
       die

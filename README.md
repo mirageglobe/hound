@@ -1,5 +1,5 @@
 
-# clamshieldcli #
+# clamshield
 
 - author/site : Jimmy MG Lim (mirageglobe@gmail.com) / www.mirageglobe.com
 - source : https://github.com/mirageglobe/clamshieldcli
@@ -14,30 +14,33 @@ The rational for this is that clamav is traditionally very memory intensive. it 
 
 This project aims to simply use progressive incremental techniques of marking and isolation of files to scan a system. Ideally this deals with both micro vms or docker containers.
 
-# To use #
+# instructions
 
-requirements,
+requirements :
 
-- linux debian / ubuntu
+- linux debian
+- linux ubuntu
 - macosx
 
 to run and see options/help,
+
 ```
-$ sh clamshield.xxxx.sh
+$ ./clamshield-cli/clamshield --help
+$ ./clamshield-cli/clamshield scan              # scan contents of current folder
+$ ./clamshield-cli/clamshield update            # update virus definitions
 ```
 
-
-# Guidelines #
+# guidelines
 
 a few points to note before submitting PR :
 
 - ensure this is tested on debian (as indicated in vagrantfile)
 
-# References #
+# references
 
 - http://forums.clamwin.com/viewtopic.php?t=4279 (for 5 phase clamav scanning optimisation)
 
-# License #
+# license
 
 Copyright 2018 Jimmy MG Lim (mirageglobe@gmail.com)
 
