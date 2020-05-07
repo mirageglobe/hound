@@ -4,7 +4,7 @@
 - author/site : Jimmy MG Lim (mirageglobe@gmail.com) / www.mirageglobe.com
 - source : https://github.com/mirageglobe/clamshieldcli
 
-This project is a collection of helpers to speed up clamav scanner and configuration. ClamAVcli is a commandline application that does the following:
+This project consists of two parts : (1) clamshield-cli - a cli wrapper for clamav (2) clamshield - a macos ui for clamshield. clamshield-cli is a commandline application that does the following:
 
 * provides a single maintained scan of one location
 * a strategic sweep of systemwide files and folders
@@ -16,9 +16,14 @@ This project aims to simply use progressive incremental techniques of marking an
 
 # To use #
 
+requirements,
+
+- linux debian / ubuntu
+- macosx
+
 to run and see options/help,
 ```
-  $ sh clamshield.xxxx.sh
+$ sh clamshield.xxxx.sh
 ```
 
 
