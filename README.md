@@ -2,17 +2,28 @@
 # clamshield
 
 - author/site : Jimmy MG Lim (mirageglobe@gmail.com) / www.mirageglobe.com
-- source : https://github.com/mirageglobe/clamshieldcli
-
-This project consists of two parts : (1) clamshield-cli - a cli wrapper for clamav (2) clamshield - a macos ui for clamshield. clamshield-cli is a commandline application that does the following:
-
-* provides a single maintained scan of one location
-* a strategic sweep of systemwide files and folders
-* a strategic incremental scan for memory limited machines or instances (less than 512mb)
+- source : https://github.com/mirageglobe/clamshield
 
 The rational for this is that clamav is traditionally very memory intensive. it was designed to place files in memory as well as virus signatures for scanning. it is common for out of memory issues to happen if configured improperly. infact it almost always runs out of memory.
 
 This project aims to simply use progressive incremental techniques of marking and isolation of files to scan a system. Ideally this deals with both micro vms or docker containers.
+
+This project consists of two parts :
+
+-  clamshield : a macos app for clamshield
+-  clamshield-cli : a cli wrapper for clamav
+
+clamshield-cli is a commandline application that does the following :
+
+- provides a single maintained scan of one location
+- a strategic sweep of systemwide files and folders
+- a strategic incremental scan for memory limited machines or instances (less than 512mb)
+
+Use cases :
+
+- clamshield as a desktop interface for ondemand scanning
+- clamshield-cli as a commandline tool for scanning
+- clamshield-cli as a prehook vulnerability scanner for git
 
 # instructions
 
@@ -25,9 +36,9 @@ requirements :
 to run and see options/help,
 
 ```
-$ ./clamshield-cli/clamshield --help
-$ ./clamshield-cli/clamshield scan              # scan contents of current folder
-$ ./clamshield-cli/clamshield update            # update virus definitions
+$ ./clamshield-cli/cs --help
+$ ./clamshield-cli/cs scan              # scan contents of current folder
+$ ./clamshield-cli/cs update            # update virus definitions
 ```
 
 # guidelines
