@@ -33,13 +33,24 @@ requirements :
 - linux ubuntu
 - macosx
 
-to run and see options/help,
+to install and run,
 
 ```
-$ ./clamshield-cli/cs --help
-$ ./clamshield-cli/cs scan              # scan contents of current folder
-$ ./clamshield-cli/cs update            # update virus definitions
+
 ```
+
+or to clone repo run,
+
+```
+$ ./clamshield-cli/clamshield --help
+$ ./clamshield-cli/clamshield scan              # scan contents of current folder
+$ ./clamshield-cli/clamshield update            # update virus definitions
+```
+
+# roadmap
+
+- include vulnerability scanner https://github.com/dxa4481/truffleHog
+- include repo scanner
 
 # guidelines
 
@@ -50,6 +61,9 @@ a few points to note before submitting PR :
 # references
 
 - http://forums.clamwin.com/viewtopic.php?t=4279 (for 5 phase clamav scanning optimisation)
+- https://github.com/ezekg/git-hound
+- https://github.com/UKHomeOffice/repo-security-scanner
+- https://geekflare.com/github-credentials-scanner/
 
 # license
 
