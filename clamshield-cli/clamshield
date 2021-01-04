@@ -14,7 +14,6 @@ app_basename=$(basename "${0}")
 app_argv1=$(basename "${1}")
 app_argv2=$(basename "${2}")
 
-
 # ----- include functions
 
 _print_help() {

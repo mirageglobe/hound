@@ -38,7 +38,7 @@ fi
 # ensure that configs are present
 # test clamav exec
 
-sudo apt-get install clamav
+sudo apt-get install clamav -y
 
 if [ -f "/usr/local/etc/clamav/freshclam.conf.sample" ]; then
   #touch /usr/local/etc/clamav/freshclam.conf
@@ -60,4 +60,4 @@ fi
 
 freshclam
 
-#to scan, run : clamscan ~/myfolder to scan
+# to scan, run : clamscan ~/myfolder to scan
