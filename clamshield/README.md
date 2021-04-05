@@ -1,24 +1,32 @@
-# Clamshield #
+# Clamshield
 
 - author/site : Jimmy MG Lim (mirageglobe@gmail.com) / www.mirageglobe.com
 - source : https://github.com/mirageglobe/jsf
 
 a basic opensource antivirus based on clamav.
 
-# To use #
+# use
+
+dependancies
+
+```sh
+n - https://github.com/tj/n
+```
 
 to run electron
-```
+
+```sh
+  n auto
   npm start
 ```
 
-# Guidelines #
+# guidelines
 
 a few points to note before submitting PR :
 
 - ensure this is tested
 
-# License
+# license
 
 Copyright 2018 Jimmy MG Lim (mirageglobe@gmail.com)
 
