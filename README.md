@@ -1,19 +1,22 @@
 
-# clamshield
+# hound
 
 - author/site : Jimmy MG Lim (mirageglobe@gmail.com) / www.mirageglobe.com
-- source : https://github.com/mirageglobe/clamshield
+- source : https://github.com/mirageglobe/hound
 
-The rational for this is that clamav is traditionally very memory intensive. it was designed to place files in memory as well as virus signatures for scanning. it is common for out of memory issues to happen if configured improperly. infact it almost always runs out of memory.
+```
+             .--^~,__
+ `-,,,,-------'~~'._.'
+  `-,,,  ,_      ;
+   _,-' ,'`-__; '--,
+  (_/`~~      ''''{;
+```
 
-This project aims to simply use progressive incremental techniques of marking and isolation of files to scan a system. Ideally this deals with both micro vms or docker containers.
+Hound is a cli tool that is based off clamav and chrootkit.
 
-This project consists of two parts :
+There is also several handy cron example scripts for setting up clamav. infact it almost always runs out of memory. This project aims to simply use progressive incremental techniques of marking and isolation of files to scan a system. Ideally this deals with both micro vms or docker containers.
 
--  clamshield : a macos app for clamshield
--  clamshield-cli : a cli wrapper for clamav
-
-clamshield-cli is a commandline application that does the following :
+Hound is a commandline application that does the following :
 
 - provides a single maintained scan of one location
 - a strategic sweep of systemwide files and folders
@@ -21,9 +24,8 @@ clamshield-cli is a commandline application that does the following :
 
 Use cases :
 
-- clamshield as a desktop interface for ondemand scanning
-- clamshield-cli as a commandline tool for scanning
-- clamshield-cli as a prehook vulnerability scanner for git
+- as a commandline tool for scanning
+- as a prehook vulnerability scanner for git
 
 # instructions
 
@@ -42,9 +44,9 @@ to install and run,
 or to clone repo run,
 
 ```
-$ ./clamshield-cli/clamshield --help
-$ ./clamshield-cli/clamshield scan              # scan contents of current folder
-$ ./clamshield-cli/clamshield update            # update virus definitions
+$ ./clamshield --help
+$ ./hound/clamshield scan              # scan contents of current folder
+$ ./hound/clamshield update            # update virus definitions
 ```
 
 # roadmap
