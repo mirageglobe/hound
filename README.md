@@ -1,6 +1,8 @@
 
 # hound
 
+this project is archived and integrated as part of butlerfox ( https://github.com/mirageglobe/butlerfox )
+
 - author/site : Jimmy MG Lim (mirageglobe@gmail.com) / www.mirageglobe.com
 - source : https://github.com/mirageglobe/hound
 
